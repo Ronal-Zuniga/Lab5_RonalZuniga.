@@ -9,7 +9,7 @@ public class Licenciaturas extends Carrera {
     
     public Licenciaturas(String tipo, String facultad, double costo, String jefe) {
         super(facultad, costo, jefe);
-        this.tipo = tipo;
+        setTipo(tipo);
     }
     
     public Licenciaturas(String tipo) {

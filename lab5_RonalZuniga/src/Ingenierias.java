@@ -7,7 +7,7 @@ public class Ingenierias extends Carrera{
     
     public Ingenierias(String tipo, String facultad, double costo, String jefe) {
         super(facultad, costo, jefe);
-        this.tipo = tipo;
+        setTipo(tipo);
     }
     
     public Ingenierias(String tipo) {
@@ -22,7 +22,7 @@ public class Ingenierias extends Carrera{
         if (tipo.equals("Sistemas Computacionales") || tipo.equals("Industrial y de Sistemas") || tipo.equals("Mecatrónica")
                 || tipo.equals("Biomédica") || tipo.equals("Energía")) {
             this.tipo = tipo;
-            super.setNombre("Licenciatura en " + tipo);
+            super.setNombre("Ingeniería en " + tipo);
         }
     }
 

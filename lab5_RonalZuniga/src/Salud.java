@@ -9,7 +9,7 @@ public class Salud extends Carrera {
 
     public Salud(String tipo, String facultad, double costo, String jefe) {
         super(facultad, costo, jefe);
-        this.tipo = tipo;
+        setTipo(tipo);
     }
 
     public Salud(String tipo) {
@@ -24,7 +24,7 @@ public class Salud extends Carrera {
         if (tipo.equals("Medicina y Cirugía") || tipo.equals("Odontología") || tipo.equals("Nutrición")
                 || tipo.equals("Terapia Física y Ocupacional")) {
             this.tipo = tipo;
-            super.setNombre("Licenciatura en " + tipo);
+            super.setNombre(tipo);
         }
     }
 
