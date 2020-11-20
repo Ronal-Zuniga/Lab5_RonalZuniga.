@@ -36,7 +36,7 @@ public class Estudiante extends Persona{
 
     @Override
     public String toString() {
-        return "Estudiante{" + "cuenta=" + cuenta + ", carrera=" + carrera + '}';
+        return cuenta + "  " + super.getNombre() + "  " + super.getApellido();
     }
     
 }

@@ -32,7 +32,7 @@ public class Maestro extends Persona{
 
     @Override
     public String toString() {
-        return "Maestro{" + "salario=" + salario + ", clases=" + clases + '}';
+        return super.getNombre() + "  " + super.getApellido() + "  " + super.getEdad();
     }
     
 }

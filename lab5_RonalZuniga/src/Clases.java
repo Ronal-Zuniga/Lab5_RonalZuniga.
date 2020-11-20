@@ -58,7 +58,7 @@ public class Clases {
 
     @Override
     public String toString() {
-        return "Clases{" + "nombre=" + nombre + ", seccion=" + seccion + ", edificio=" + edificio + ", salon=" + salon + ", aire=" + aire + '}';
+        return nombre + "  " + seccion;
     }
     
 }
