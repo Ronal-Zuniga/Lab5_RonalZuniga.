@@ -1361,6 +1361,7 @@ public class Principal extends javax.swing.JFrame {
         jScrollPane1.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
 
         listaclases.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        listaclases.setModel(new DefaultListModel());
         listaclases.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 listaclasesMouseClicked(evt);
@@ -1371,6 +1372,7 @@ public class Principal extends javax.swing.JFrame {
         jScrollPane2.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
 
         listamaestros.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        listamaestros.setModel(new DefaultListModel());
         listamaestros.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 listamaestrosMouseClicked(evt);
@@ -1381,6 +1383,7 @@ public class Principal extends javax.swing.JFrame {
         jScrollPane3.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
 
         listaalumnos.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        listaalumnos.setModel(new DefaultListModel());
         listaalumnos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 listaalumnosMouseClicked(evt);
