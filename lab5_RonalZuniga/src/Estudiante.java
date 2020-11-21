@@ -12,6 +12,11 @@ public class Estudiante extends Persona{
         this.carrera = carrera;
     }
 
+    public Estudiante(String nombre) {
+        super(nombre);
+    }
+
+    
     public Estudiante(int cuenta, Carrera carrera) {
         this.cuenta = cuenta;
         this.carrera = carrera;
