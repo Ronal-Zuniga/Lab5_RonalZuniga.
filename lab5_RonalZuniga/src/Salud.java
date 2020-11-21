@@ -30,7 +30,7 @@ public class Salud extends Carrera {
 
     @Override
     public String toString() {
-        return "Salud{" + "tipo=" + tipo + '}';
+        return super.getNombre();
     }
     
 }

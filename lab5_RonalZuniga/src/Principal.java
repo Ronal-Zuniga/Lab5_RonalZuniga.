@@ -41,6 +41,50 @@ public class Principal extends javax.swing.JFrame {
         eliminarm = new javax.swing.JMenuItem();
         pmalumno = new javax.swing.JPopupMenu();
         enviar = new javax.swing.JMenuItem();
+        modc = new javax.swing.JDialog();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel31 = new javax.swing.JLabel();
+        nc2 = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        sc1 = new javax.swing.JTextField();
+        jLabel34 = new javax.swing.JLabel();
+        ed1 = new javax.swing.JSpinner();
+        sl1 = new javax.swing.JTextField();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        aire1 = new javax.swing.JComboBox<>();
+        jButton8 = new javax.swing.JButton();
+        modm = new javax.swing.JDialog();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel37 = new javax.swing.JLabel();
+        n3 = new javax.swing.JTextField();
+        ap3 = new javax.swing.JTextField();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        edad2 = new javax.swing.JSpinner();
+        jLabel41 = new javax.swing.JLabel();
+        g2 = new javax.swing.JComboBox<>();
+        jButton9 = new javax.swing.JButton();
+        jLabel42 = new javax.swing.JLabel();
+        salario1 = new javax.swing.JTextField();
+        clases1 = new javax.swing.JComboBox<>();
+        jLabel43 = new javax.swing.JLabel();
+        jButton10 = new javax.swing.JButton();
+        modcrr = new javax.swing.JDialog();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        carr = new javax.swing.JComboBox<>();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jf1 = new javax.swing.JTextField();
+        costo1 = new javax.swing.JTextField();
+        jButton11 = new javax.swing.JButton();
+        info = new javax.swing.JLabel();
+        moda = new javax.swing.JDialog();
         tp = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -111,9 +155,15 @@ public class Principal extends javax.swing.JFrame {
         listamaestros = new javax.swing.JList<>();
         jScrollPane3 = new javax.swing.JScrollPane();
         listaalumnos = new javax.swing.JList<>();
+        jButton7 = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
 
         modificarc.setText("Modificar Clase");
+        modificarc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificarcActionPerformed(evt);
+            }
+        });
         pmclase.add(modificarc);
 
         eliminarc.setText("Eliminar Clase");
@@ -125,6 +175,11 @@ public class Principal extends javax.swing.JFrame {
         pmclase.add(eliminarc);
 
         modificarm.setText("Modificar Maestro");
+        modificarm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificarmActionPerformed(evt);
+            }
+        });
         pmmaestro.add(modificarm);
 
         eliminarm.setText("Eliminar Maestro");
@@ -137,6 +192,431 @@ public class Principal extends javax.swing.JFrame {
 
         enviar.setText("Enviar Alumno al Árbol");
         pmalumno.add(enviar);
+
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel31.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(51, 0, 204));
+        jLabel31.setText("Ingrese el nombre de la clase");
+
+        nc2.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+
+        jLabel32.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(51, 0, 204));
+        jLabel32.setText("Modificar Clase");
+
+        jLabel33.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(51, 0, 204));
+        jLabel33.setText("Ingrese la sección de la clase");
+
+        sc1.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+
+        jLabel34.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(51, 0, 204));
+        jLabel34.setText("Ingrese el Edificio de la clase");
+
+        ed1.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        ed1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 7, 1));
+
+        sl1.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+
+        jLabel35.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(51, 0, 204));
+        jLabel35.setText("Ingrese el salón de la clase");
+
+        jLabel36.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(51, 0, 204));
+        jLabel36.setText("¿Tiene aire acondicionado?");
+
+        aire1.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        aire1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Si", "No" }));
+
+        jButton8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton8.setText("Guardar Clase");
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton8MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addGap(488, 488, 488)
+                                .addComponent(jLabel32))
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addGap(253, 253, 253)
+                                .addComponent(jLabel31)
+                                .addGap(92, 92, 92)
+                                .addComponent(nc2, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel8Layout.createSequentialGroup()
+                            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel33)
+                                .addComponent(jLabel34)
+                                .addComponent(jLabel35)
+                                .addComponent(jLabel36))
+                            .addGap(92, 92, 92)
+                            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(sl1, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(sc1, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ed1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(aire1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(479, 479, 479)
+                        .addComponent(jButton8)))
+                .addContainerGap(213, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(86, 86, 86)
+                .addComponent(jLabel32)
+                .addGap(69, 69, 69)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nc2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel31))
+                .addGap(70, 70, 70)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(sc1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel33))
+                .addGap(76, 76, 76)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ed1))
+                .addGap(64, 64, 64)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(sl1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel35))
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addComponent(jLabel36))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addComponent(aire1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                .addComponent(jButton8)
+                .addGap(27, 27, 27))
+        );
+
+        javax.swing.GroupLayout modcLayout = new javax.swing.GroupLayout(modc.getContentPane());
+        modc.getContentPane().setLayout(modcLayout);
+        modcLayout.setHorizontalGroup(
+            modcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1239, Short.MAX_VALUE)
+            .addGroup(modcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(modcLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        modcLayout.setVerticalGroup(
+            modcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 779, Short.MAX_VALUE)
+            .addGroup(modcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(modcLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel37.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(51, 0, 204));
+        jLabel37.setText("Modificar Maestro");
+
+        n3.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+
+        ap3.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+
+        jLabel38.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jLabel38.setForeground(new java.awt.Color(51, 0, 204));
+        jLabel38.setText("Apellido:");
+
+        jLabel39.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(51, 0, 204));
+        jLabel39.setText("Nombre:");
+
+        jLabel40.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(51, 0, 204));
+        jLabel40.setText("Edad:");
+
+        edad2.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        edad2.setModel(new javax.swing.SpinnerNumberModel(30, 30, 70, 1));
+
+        jLabel41.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(51, 0, 204));
+        jLabel41.setText("Género:");
+
+        g2.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        g2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Femenino", "Masculino" }));
+
+        jButton9.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton9.setText("Guardar Maestro");
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton9MouseClicked(evt);
+            }
+        });
+
+        jLabel42.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(51, 0, 204));
+        jLabel42.setText("Salario:");
+
+        salario1.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+
+        clases1.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+
+        jLabel43.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jLabel43.setForeground(new java.awt.Color(51, 0, 204));
+        jLabel43.setText("Clases:");
+
+        jButton10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton10.setText("Agregar Clase Seleccionada");
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton10MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(297, 297, 297)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel9Layout.createSequentialGroup()
+                            .addGap(227, 227, 227)
+                            .addComponent(jLabel37))
+                        .addGroup(jPanel9Layout.createSequentialGroup()
+                            .addComponent(jLabel39)
+                            .addGap(70, 70, 70)
+                            .addComponent(n3, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel9Layout.createSequentialGroup()
+                            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel38, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel40, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel41, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addGap(70, 70, 70)
+                            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(edad2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ap3, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(g2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel9Layout.createSequentialGroup()
+                            .addGap(207, 207, 207)
+                            .addComponent(jButton9)))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addComponent(jLabel42)
+                                .addGap(70, 70, 70)
+                                .addComponent(salario1, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addComponent(jLabel43)
+                                .addGap(70, 70, 70)
+                                .addComponent(clases1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(1, 1, 1)))
+                .addGap(27, 27, 27)
+                .addComponent(jButton10)
+                .addContainerGap(88, Short.MAX_VALUE))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(73, 73, 73)
+                .addComponent(jLabel37)
+                .addGap(54, 54, 54)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel39)
+                    .addComponent(n3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel38)
+                    .addComponent(ap3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel40)
+                    .addComponent(edad2))
+                .addGap(36, 36, 36)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel41)
+                    .addComponent(g2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(51, 51, 51)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel42)
+                    .addComponent(salario1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(65, 65, 65)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel43)
+                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(clases1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton10)))
+                .addGap(115, 115, 115)
+                .addComponent(jButton9)
+                .addGap(31, 31, 31))
+        );
+
+        javax.swing.GroupLayout modmLayout = new javax.swing.GroupLayout(modm.getContentPane());
+        modm.getContentPane().setLayout(modmLayout);
+        modmLayout.setHorizontalGroup(
+            modmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1239, Short.MAX_VALUE)
+            .addGroup(modmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(modmLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        modmLayout.setVerticalGroup(
+            modmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 779, Short.MAX_VALUE)
+            .addGroup(modmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(modmLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel10.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel44.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(51, 0, 204));
+        jLabel44.setText("Modificar Carrera");
+
+        jLabel45.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(51, 0, 204));
+        jLabel45.setText("Seleccione la facultad");
+
+        carr.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        carr.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                carrItemStateChanged(evt);
+            }
+        });
+
+        jLabel46.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(51, 0, 204));
+        jLabel46.setText("Carrera a modificar: ");
+
+        jLabel47.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(51, 0, 204));
+        jLabel47.setText("Ingrese el Jefe de Carrera");
+
+        jLabel48.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(51, 0, 204));
+        jLabel48.setText("Ingrese el costo de la Carrera");
+
+        jf1.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+
+        costo1.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+
+        jButton11.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton11.setText("Guardar Carrera");
+        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton11MouseClicked(evt);
+            }
+        });
+
+        info.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+        info.setForeground(new java.awt.Color(51, 0, 204));
+        info.setText("     ");
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(490, 490, 490)
+                        .addComponent(jLabel44))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(258, 258, 258)
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(jLabel47)
+                            .addComponent(jLabel46)
+                            .addComponent(jLabel45)
+                            .addComponent(jLabel48))
+                        .addGap(107, 107, 107)
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(carr, 0, 324, Short.MAX_VALUE)
+                                .addComponent(jf1)
+                                .addComponent(costo1, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(info, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(490, 490, 490)
+                        .addComponent(jButton11)))
+                .addContainerGap(130, Short.MAX_VALUE))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addComponent(jLabel44)
+                .addGap(74, 74, 74)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel45)
+                    .addComponent(carr, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(81, 81, 81)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel46)
+                    .addComponent(info))
+                .addGap(99, 99, 99)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jf1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel47))
+                .addGap(80, 80, 80)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(costo1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel48))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addComponent(jButton11)
+                .addGap(34, 34, 34))
+        );
+
+        javax.swing.GroupLayout modcrrLayout = new javax.swing.GroupLayout(modcrr.getContentPane());
+        modcrr.getContentPane().setLayout(modcrrLayout);
+        modcrrLayout.setHorizontalGroup(
+            modcrrLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1239, Short.MAX_VALUE)
+            .addGroup(modcrrLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(modcrrLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        modcrrLayout.setVerticalGroup(
+            modcrrLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 779, Short.MAX_VALUE)
+            .addGroup(modcrrLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(modcrrLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        javax.swing.GroupLayout modaLayout = new javax.swing.GroupLayout(moda.getContentPane());
+        moda.getContentPane().setLayout(modaLayout);
+        modaLayout.setHorizontalGroup(
+            modaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        modaLayout.setVerticalGroup(
+            modaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -718,6 +1198,14 @@ public class Principal extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(listaalumnos);
 
+        jButton7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton7.setText("Ir a Modificar Carreras");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -738,6 +1226,10 @@ public class Principal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(72, 72, 72))
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(471, 471, 471)
+                .addComponent(jButton7)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -752,7 +1244,9 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 534, Short.MAX_VALUE)
                     .addComponent(jScrollPane2)
                     .addComponent(jScrollPane1))
-                .addContainerGap(97, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addComponent(jButton7)
+                .addContainerGap())
         );
 
         tp.addTab("Listas", jPanel6);
@@ -810,7 +1304,7 @@ public class Principal extends javax.swing.JFrame {
                 g.setEnabled(true);
                 cn.setEnabled(true);
                 c.setEnabled(true);
-                DefaultComboBoxModel m = (DefaultComboBoxModel)c.getModel();
+                DefaultComboBoxModel m = (DefaultComboBoxModel) c.getModel();
                 for (int i = 0; i < carreras.size(); i++) {
                     m.addElement(carreras.get(i).getNombre());
                 }
@@ -818,21 +1312,21 @@ public class Principal extends javax.swing.JFrame {
             }
         }
         if (tp.getSelectedIndex() == 4) {
-            DefaultComboBoxModel m = (DefaultComboBoxModel)clases.getModel();
+            DefaultComboBoxModel m = (DefaultComboBoxModel) clases.getModel();
             for (int i = 0; i < cl.size(); i++) {
-                m.addElement(cl.get(i).getNombre());
+                m.addElement(cl.get(i));
             }
             clases.setModel(m);
         }
         if (tp.getSelectedIndex() == 5) {
             DefaultListModel modelo
-                = (DefaultListModel) listaclases.getModel();
+                    = (DefaultListModel) listaclases.getModel();
             for (int i = 0; i < cl.size(); i++) {
                 modelo.addElement(cl.get(i));
             }
             listaclases.setModel(modelo);
             DefaultListModel modelo1
-                = (DefaultListModel) listamaestros.getModel();
+                    = (DefaultListModel) listamaestros.getModel();
             for (int i = 0; i < p.size(); i++) {
                 if (p.get(i) instanceof Maestro) {
                     modelo1.addElement(cl.get(i));
@@ -840,7 +1334,7 @@ public class Principal extends javax.swing.JFrame {
             }
             listamaestros.setModel(modelo1);
             DefaultListModel modelo2
-                = (DefaultListModel) listaalumnos.getModel();
+                    = (DefaultListModel) listaalumnos.getModel();
             for (int i = 0; i < p.size(); i++) {
                 if (p.get(i) instanceof Estudiante) {
                     modelo2.addElement(cl.get(i));
@@ -923,7 +1417,7 @@ public class Principal extends javax.swing.JFrame {
         int age = ((Integer) edad.getValue());
         String genero = g.getSelectedItem().toString();
         int cuenta = Integer.parseInt(cn.getText());
-        Carrera cr = ((Carrera)c.getSelectedItem());
+        Carrera cr = ((Carrera) c.getSelectedItem());
         Estudiante e = new Estudiante(cuenta, cr, nombre, apellido, age, genero);
         p.add(e);
         JOptionPane.showMessageDialog(null, "Estudiante agregado correctamente");
@@ -974,15 +1468,15 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
-        Clases x = ((Clases)clases.getSelectedItem());
+        Clases x = ((Clases) clases.getSelectedItem());
         aux.add(x);
         JOptionPane.showMessageDialog(null, "Clase agregada correctamente");
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void eliminarcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarcActionPerformed
         DefaultListModel modelo
-                    = (DefaultListModel) listaclases.getModel();
-        Clases x = ((Clases)modelo.get(listaclases.getSelectedIndex()));
+                = (DefaultListModel) listaclases.getModel();
+        Clases x = ((Clases) modelo.get(listaclases.getSelectedIndex()));
         if (cl.contains(x)) {
             cl.remove(x);
             modelo.remove(listaclases.getSelectedIndex());
@@ -992,7 +1486,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_eliminarcActionPerformed
 
     private void listaclasesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listaclasesMouseClicked
-         if (listaclases.getSelectedIndex() >= 0) {
+        if (listaclases.getSelectedIndex() >= 0) {
             if (evt.isMetaDown()) {
                 pmclase.show(evt.getComponent(),
                         evt.getX(), evt.getY());
@@ -1023,8 +1517,8 @@ public class Principal extends javax.swing.JFrame {
 
     private void eliminarmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarmActionPerformed
         DefaultListModel modelo
-                    = (DefaultListModel) listamaestros.getModel();
-        Maestro m = ((Maestro)modelo.get(listamaestros.getSelectedIndex()));
+                = (DefaultListModel) listamaestros.getModel();
+        Maestro m = ((Maestro) modelo.get(listamaestros.getSelectedIndex()));
         if (p.contains(m)) {
             p.remove(m);
             modelo.remove(listamaestros.getSelectedIndex());
@@ -1032,6 +1526,144 @@ public class Principal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Maestro eliminado correctamente");
         }
     }//GEN-LAST:event_eliminarmActionPerformed
+
+    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+        DefaultListModel modelo
+                = (DefaultListModel) listaclases.getModel();
+        Clases x = ((Clases) modelo.get(listaclases.getSelectedIndex()));
+        if (cl.contains(x)) {
+            String nombre = nc2.getText();
+            int s = Integer.parseInt(sc1.getText());
+            int e = ((Integer) ed1.getValue());
+            int salon = Integer.parseInt(sl1.getText());
+            boolean a = false;
+            String aux = aire1.getSelectedItem().toString();
+            if (aux.equals("Si")) {
+                a = true;
+            } else {
+                a = false;
+            }
+            for (int i = 0; i < cl.size(); i++) {
+                if (cl.get(i).equals(x)) {
+                    cl.get(i).setNombre(nombre);
+                    cl.get(i).setEdificio(e);
+                    cl.get(i).setSeccion(s);
+                    cl.get(i).setSalon(salon);
+                    cl.get(i).setAire(a);
+                }
+            }
+            DefaultComboBoxModel m = (DefaultComboBoxModel) clases.getModel();
+            for (int i = 0; i < cl.size(); i++) {
+                m.addElement(cl.get(i).getNombre());
+            }
+            clases.setModel(m);
+            DefaultListModel modelo1
+                    = (DefaultListModel) listaclases.getModel();
+            for (int i = 0; i < cl.size(); i++) {
+                modelo1.addElement(cl.get(i));
+            }
+            listaclases.setModel(modelo1);
+            JOptionPane.showMessageDialog(null, "Clase modificada correctamente");
+            nc1.setText("");
+            ed.setValue(1);
+            sl.setText("");
+        }
+    }//GEN-LAST:event_jButton8MouseClicked
+
+    private void modificarcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarcActionPerformed
+        modc.setModal(true);
+        modc.pack();
+        modc.setLocationRelativeTo(this);
+        modc.setVisible(true);
+    }//GEN-LAST:event_modificarcActionPerformed
+
+    private void modificarmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarmActionPerformed
+        modm.setModal(true);
+        modm.pack();
+        modm.setLocationRelativeTo(this);
+        modm.setVisible(true);
+    }//GEN-LAST:event_modificarmActionPerformed
+
+    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
+        DefaultListModel modelo
+                = (DefaultListModel) listamaestros.getModel();
+        Maestro m = ((Maestro) modelo.get(listamaestros.getSelectedIndex()));
+        if (p.contains(m)) {
+            String nombre = n3.getText();
+            String apellido = ap3.getText();
+            int age = ((Integer) edad2.getValue());
+            String genero = g2.getSelectedItem().toString();
+            double s = Double.parseDouble(salario1.getText());
+            for (int i = 0; i < p.size(); i++) {
+                if (p.get(i).equals(m) && p.get(i) instanceof Maestro) {
+                    p.get(i).setNombre(nombre);
+                    p.get(i).setApellido(apellido);
+                    p.get(i).setEdad(age);
+                    p.get(i).setGenero(genero);
+                    ((Maestro) p.get(i)).setSalario(s);
+                    ((Maestro) p.get(i)).setClases(aux);
+                }
+            }
+            DefaultListModel modelo1
+                    = (DefaultListModel) listamaestros.getModel();
+            for (int i = 0; i < p.size(); i++) {
+                if (p.get(i) instanceof Maestro) {
+                    modelo1.addElement(cl.get(i));
+                }
+            }
+            listamaestros.setModel(modelo1);
+            JOptionPane.showMessageDialog(null, "Maestro modificado correctamente");
+            n3.setText("");
+            aux = new ArrayList();
+            ap3.setText("");
+            edad2.setValue(30);
+            salario1.getText();
+        }
+    }//GEN-LAST:event_jButton9MouseClicked
+
+    private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
+        Clases x = ((Clases) clases1.getSelectedItem());
+        aux.add(x);
+        JOptionPane.showMessageDialog(null, "Clase agregada correctamente");
+    }//GEN-LAST:event_jButton10MouseClicked
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+        modcrr.setModal(true);
+        modcrr.pack();
+        modcrr.setLocationRelativeTo(this);
+        modcrr.setVisible(true);
+        DefaultComboBoxModel m = (DefaultComboBoxModel) carr.getModel();
+        for (int i = 0; i < carreras.size(); i++) {
+            m.addElement(carreras.get(i));
+        }
+        carr.setModel(m);
+    }//GEN-LAST:event_jButton7MouseClicked
+
+    private void carrItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_carrItemStateChanged
+        Carrera cr = ((Carrera)carr.getSelectedItem());
+        info.setText(cr.getNombre());
+    }//GEN-LAST:event_carrItemStateChanged
+
+    private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
+        Carrera cr = ((Carrera)carr.getSelectedItem());
+        String jefe = jf1.getText();
+        double cst = Double.parseDouble(costo1.getText());
+        for (int i = 0; i < carreras.size(); i++) {
+            if (carreras.get(i).equals(cr)) {
+                carreras.get(i).setJefe(jefe);
+                carreras.get(i).setCosto(cst);
+            }
+        }
+        DefaultComboBoxModel m = (DefaultComboBoxModel) carr.getModel();
+        for (int i = 0; i < carreras.size(); i++) {
+            m.addElement(carreras.get(i));
+        }
+        carr.setModel(m);
+        c.setModel(m);
+        jf1.setText("");
+        costo1.setText("");
+        JOptionPane.showMessageDialog(null, "Carrera modificada correctamente");
+    }//GEN-LAST:event_jButton11MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1070,28 +1702,42 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> aire;
+    private javax.swing.JComboBox<String> aire1;
     private javax.swing.JTextField ap1;
     private javax.swing.JTextField ap2;
+    private javax.swing.JTextField ap3;
     private javax.swing.JComboBox<String> c;
     private javax.swing.JComboBox<String> c1;
+    private javax.swing.JComboBox<String> carr;
     private javax.swing.JComboBox<String> clases;
+    private javax.swing.JComboBox<String> clases1;
     private javax.swing.JTextField cn;
     private javax.swing.JTextField costo;
+    private javax.swing.JTextField costo1;
     private javax.swing.JSpinner ed;
+    private javax.swing.JSpinner ed1;
     private javax.swing.JSpinner edad;
     private javax.swing.JSpinner edad1;
+    private javax.swing.JSpinner edad2;
     private javax.swing.JMenuItem eliminarc;
     private javax.swing.JMenuItem eliminarm;
     private javax.swing.JMenuItem enviar;
     private javax.swing.JComboBox<String> f1;
     private javax.swing.JComboBox<String> g;
     private javax.swing.JComboBox<String> g1;
+    private javax.swing.JComboBox<String> g2;
+    private javax.swing.JLabel info;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1116,37 +1762,68 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextField jf;
+    private javax.swing.JTextField jf1;
     private javax.swing.JList<String> listaalumnos;
     private javax.swing.JList<String> listaclases;
     private javax.swing.JList<String> listamaestros;
+    private javax.swing.JDialog moda;
+    private javax.swing.JDialog modc;
+    private javax.swing.JDialog modcrr;
     private javax.swing.JMenuItem modificarc;
     private javax.swing.JMenuItem modificarm;
+    private javax.swing.JDialog modm;
     private javax.swing.JTextField n1;
     private javax.swing.JTextField n2;
+    private javax.swing.JTextField n3;
     private javax.swing.JTextField nc1;
+    private javax.swing.JTextField nc2;
     private javax.swing.JPopupMenu pmalumno;
     private javax.swing.JPopupMenu pmclase;
     private javax.swing.JPopupMenu pmmaestro;
     private javax.swing.JTextField salario;
+    private javax.swing.JTextField salario1;
     private javax.swing.JTextField sc;
+    private javax.swing.JTextField sc1;
     private javax.swing.JTextField sl;
+    private javax.swing.JTextField sl1;
     private javax.swing.JTabbedPane tp;
     // End of variables declaration//GEN-END:variables
 
@@ -1159,7 +1836,7 @@ public class Principal extends javax.swing.JFrame {
 
     public void refresh() {
         if (f1.getSelectedItem().equals("Licenciaturas")) {
-            DefaultComboBoxModel m = (DefaultComboBoxModel)c1.getModel();
+            DefaultComboBoxModel m = (DefaultComboBoxModel) c1.getModel();
             m.addElement("Finanzas");
             m.addElement("Derecho");
             m.addElement("Administración de Empresas");
@@ -1168,7 +1845,7 @@ public class Principal extends javax.swing.JFrame {
             c1.setModel(m);
         }
         if (f1.getSelectedItem().equals("Ingenierías")) {
-            DefaultComboBoxModel m = (DefaultComboBoxModel)c1.getModel();
+            DefaultComboBoxModel m = (DefaultComboBoxModel) c1.getModel();
             m.addElement("Sistemas Computacionales");
             m.addElement("Industrial y de Sistemas");
             m.addElement("Mecatrónica");
@@ -1177,7 +1854,7 @@ public class Principal extends javax.swing.JFrame {
             c1.setModel(m);
         }
         if (f1.getSelectedItem().equals("Ciencias de la Salud")) {
-            DefaultComboBoxModel m = (DefaultComboBoxModel)c1.getModel();
+            DefaultComboBoxModel m = (DefaultComboBoxModel) c1.getModel();
             m.addElement("Medicina y Cirugía");
             m.addElement("Odontología");
             m.addElement("Nutrición");

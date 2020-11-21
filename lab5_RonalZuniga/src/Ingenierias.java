@@ -28,7 +28,7 @@ public class Ingenierias extends Carrera{
 
     @Override
     public String toString() {
-        return "Ingenierias{" + "tipo=" + tipo + '}';
+        return super.getNombre();
     }
     
 }

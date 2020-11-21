@@ -30,7 +30,7 @@ public class Licenciaturas extends Carrera {
     
     @Override
     public String toString() {
-        return "Licenciaturas{" + "tipo=" + tipo + '}';
+        return super.getNombre();
     }
     
 }
